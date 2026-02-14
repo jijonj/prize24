@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Prize24</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        // Premium Black Palette
+                        obsidian: {
+                            950: '#050505', // Deepest background
+                            900: '#0a0a0a', // Secondary background
+                            800: '#171717', // Cards/Nav
+                            700: '#262626', // Borders
+                        },
+                        // Premium Orange Palette
+                        blaze: {
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#FF5500', // Primary Brand Color
+                            700: '#ea580c',
+                            900: '#7c2d12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom Selection Color */
+        ::selection {
+            background-color: #FF5500;
+            color: white;
+        }
+
+        /* Premium Glass Effect */
+        .glass-panel {
+            background: rgba(23, 23, 23, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* List Styling */
+        ul.legal-list li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        ul.legal-list li::before {
+            content: '•';
+            color: #FF5500;
+            /* blaze-600 */
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="bg-obsidian-950 font-sans text-gray-300 antialiased selection:bg-blaze-600 selection:text-white">
+
+    <nav class="fixed w-full z-50 top-0 px-6 py-4 glass-panel border-b border-obsidian-700/50">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="p24_logo.webp" alt="Prize24 Logo"
+                    class="h-8 w-auto group-hover:scale-105 transition-transform">
+                <span class="text-xl font-bold tracking-tight text-white">Prize<span
+                        class="text-blaze-600">24</span></span>
+            </a>
+            <a href="index.html"
+                class="text-sm font-medium text-gray-400 hover:text-white transition flex items-center gap-2 group">
+                <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform text-blaze-600"></i>
+                Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <main class="relative pt-32 pb-20 px-6">
+        <div
+            class="absolute top-0 right-1/2 translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-blaze-900/10 to-transparent blur-3xl -z-10 pointer-events-none">
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Terms and Conditions</h1>
+                <p class="text-gray-500 font-mono text-sm uppercase tracking-widest">Last Updated: January 1, 2026</p>
+            </div>
+
+            <div class="glass-panel p-8 md:p-12 rounded-[2rem] shadow-2xl relative overflow-hidden">
+                <div
+                    class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blaze-600/50 to-transparent">
+                </div>
+
+                <div class="prose prose-invert prose-lg max-w-none text-gray-300 leading-relaxed font-light">
+
+                    <h3 class="text-xl font-bold text-white mt-6 mb-4 flex items-center gap-3">
+                        <span
+                            class="flex items-center justify-center w-8 h-8 rounded-full bg-obsidian-800 border border-obsidian-700 text-blaze-600 text-sm">1</span>
+                        Acceptance of Terms
+                    </h3>
+                    <p class="mb-8">
+                        By downloading, accessing, or using the Prize24 mobile application ("App") or website
+                        (collectively, the "Service"), you agree to be bound by these Terms and Conditions ("Terms"). If
+                        you do not agree to these Terms, do not use the Service. Prize24 ("we," "us," or "our") reserves
+                        the right to update these Terms at any time.
+                    </p>
+
+                    <h3 class="text-xl font-bold text-white mt-10 mb-4 flex items-center gap-3">
+                        <span
+                            class="flex items-center justify-center w-8 h-8 rounded-full bg-obsidian-800 border border-obsidian-700 text-blaze-600 text-sm">2</span>
+                        Description of Service
+                    </h3>
+                    <p class="mb-4">
+                        Prize24 is a digital loyalty and coalition network platform that connects consumers ("Users")
+                        with local businesses ("Vendors").
+                    </p>
+                    <ul class="legal-list space-y-3 mb-8 text-sm md:text-base">
+                        <li><strong class="text-white">For Users:</strong> The App allows you to track visits
+                            ("Streaks"), earn digital points, and redeem rewards offered by Vendors.</li>
+                        <li><strong class="text-white">For Vendors:</strong> The Service allows you to create loyalty
+                            programs, manage customer data, and issue rewards.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-white mt-10 mb-4 flex items-center gap-3">
+                        <span
+                            class="flex items-center justify-center w-8 h-8 rounded-full bg-obsidian-800 border border-obsidian-700 text-blaze-600 text-sm">3</span>
+                        Accounts and Eligibility
+                    </h3>
+                    <p class="mb-8">
+                        You must be at least 13 years old to use the App. If you are under 18, you may only use the
+                        Service with the consent of a parent or guardian. You agree to provide accurate, current, and
+                        complete information during the registration process and to keep your account security
+                        credentials confidential.
+                    </p>
+
+                    <h3 class="text-xl font-bold text-white mt-10 mb-4 flex items-center gap-3">
+                        <span
+                            class="flex items-center justify-center w-8 h-8 rounded-full bg-obsidian-800 border border-obsidian-700 text-blaze-600 text-sm">4</span>
+                        Rewards, Streaks, and Promotions
+                    </h3>
+                    <div class="space-y-6 mb-8">
+                        <p>
+                            <strong class="text-white block mb-1">No Cash Value</strong>
+                            Points, "Streaks," levels, badges, and other digital assets accumulated in the App have no
+                            cash value and are not your property. They cannot be transferred to other users or exchanged
+                            for cash.
+                        </p>
+                        <p>
+                            <strong class="text-white block mb-1">Vendor Responsibility</strong>
+                            Prize24 provides the platform for Vendors to offer rewards (e.g., "Free Cookie,"
+                            "Discount"). The specific Vendor is solely responsible for fulfilling the terms of their
+                            offer. Prize24 is not liable if a Vendor refuses to honor a reward, closes for business, or
+                            changes their offer terms.
+                        </p>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-white mt-10 mb-4 flex items-center gap-3">
+                        <span
+                            class="flex items-center justify-center w-8 h-8 rounded-full bg-obsidian-800 border border-obsidian-700 text-blaze-600 text-sm">5</span>
+                        Vendor Subscription & Payments
+                    </h3>
+                    <div class="space-y-6 mb-8">
+                        <p>
+                            <strong class="text-white block mb-1">Subscriptions</strong>
+                            Vendors agree to pay the recurring subscription fees (e.g., Monthly or Annual) as described
+                            in the App or on the Website.
+                        </p>
+                        <p>
+                            <strong class="text-white block mb-1">Cancellation</strong>
+                            Vendors may cancel their subscription at any time via the Vendor Dashboard. Access to the
+                            Service will continue until the end of the current billing cycle. No refunds are provided
+                            for partial months.
+                        </p>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-white mt-10 mb-4 flex items-center gap-3">
+                        <span
+                            class="flex items-center justify-center w-8 h-8 rounded-full bg-obsidian-800 border border-obsidian-700 text-blaze-600 text-sm">6</span>
+                        User Conduct
+                    </h3>
+                    <p class="mb-4">You agree not to:</p>
+                    <ul class="legal-list space-y-3 mb-4 text-sm md:text-base">
+                        <li>Attempt to cheat, hack, or manipulate the "Streak" system or reward mechanism.</li>
+                        <li>Use the Service for any illegal purpose.</li>
+                        <li>Harass, abuse, or harm another person or business via the platform.</li>
+                    </ul>
+                    <p class="mb-8 text-sm italic text-gray-500">We reserve the right to terminate accounts that violate
+                        these rules without notice.</p>
+
+                    <h3 class="text-xl font-bold text-white mt-10 mb-4 flex items-center gap-3">
+                        <span
+                            class="flex items-center justify-center w-8 h-8 rounded-full bg-obsidian-800 border border-obsidian-700 text-blaze-600 text-sm">7</span>
+                        Intellectual Property
+                    </h3>
+                    <p class="mb-8">
+                        The Service and its original content (excluding User Content), features, and functionality are
+                        and will remain the exclusive property of Prize24.
+                    </p>
+
+                    <h3 class="text-xl font-bold text-white mt-10 mb-4 flex items-center gap-3">
+                        <span
+                            class="flex items-center justify-center w-8 h-8 rounded-full bg-obsidian-800 border border-obsidian-700 text-blaze-600 text-sm">8</span>
+                        Limitation of Liability
+                    </h3>
+
+                    <div
+                        class="bg-gradient-to-r from-red-900/10 to-transparent border-l-4 border-blaze-600 p-6 rounded-r-xl mb-8">
+                        <p class="text-blaze-500 font-bold uppercase tracking-wider text-xs mb-3">Please read this
+                            section carefully</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            To the maximum extent permitted by law, Prize24 shall not be liable for any indirect,
+                            incidental, special, consequential, or punitive damages, or any loss of profits or revenues,
+                            whether incurred directly or indirectly, or any loss of data, use, goodwill, or other
+                            intangible losses, resulting from (a) your access to or use of or inability to access or use
+                            the Service; (b) any conduct or content of any third party on the Service; or (c)
+                            unauthorized access, use, or alteration of your transmissions or content.
+                        </p>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-white mt-10 mb-4 flex items-center gap-3">
+                        <span
+                            class="flex items-center justify-center w-8 h-8 rounded-full bg-obsidian-800 border border-obsidian-700 text-blaze-600 text-sm">9</span>
+                        Contact Us
+                    </h3>
+                    <p class="mb-4">
+                        If you have any questions about these Terms, please contact us at:
+                    </p>
+                    <a href="mailto:support@prize24.app"
+                        class="inline-flex items-center gap-2 text-blaze-500 hover:text-blaze-400 font-semibold transition-colors">
+                        <i class="fa-regular fa-envelope"></i> support@prize24.app
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black border-t border-obsidian-800 py-10 text-center text-xs text-gray-600">
+        <p>&copy; 2025 Kintlearn x AidSoft. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

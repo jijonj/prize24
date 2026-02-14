@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prize24 - Rewards that never expire.</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Prize24 is the first loyalty app where your progress never expires. Shop local, keep your streak, and win real prizes. Join the neighborhood alliance today.">
+    <meta name="keywords"
+        content="loyalty app, rewards, streaks, local business, prizes, cashback, neighborhood alliance, gamified loyalty">
+    <meta name="author" content="Prize24">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="p24_logo.webp">
+    <link rel="apple-touch-icon" href="p24_logo.webp">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#FF5500">
+    <meta name="msapplication-TileColor" content="#050505">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prize24.app/">
+    <meta property="og:title" content="Prize24 - Rewards that never expire.">
+    <meta property="og:description"
+        content="The first loyalty app where your progress never expires. Shop local, keep your streak, and win real prizes.">
+    <meta property="og:image" content="https://prize24.app/p24_logo.webp">
+    <meta property="og:site_name" content="Prize24">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://prize24.app/">
+    <meta name="twitter:title" content="Prize24 - Rewards that never expire.">
+    <meta name="twitter:description"
+        content="The first loyalty app where your progress never expires. Shop local, keep your streak, and win real prizes.">
+    <meta name="twitter:image" content="https://prize24.app/p24_logo.webp">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        // Premium Black Palette
+                        obsidian: {
+                            950: '#050505', // Deepest background
+                            900: '#0a0a0a', // Secondary background
+                            800: '#171717', // Cards/Nav
+                            700: '#262626', // Borders
+                        },
+                        // Premium Orange Palette
+                        blaze: {
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#FF5500', // Primary Brand Color
+                            700: '#ea580c',
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'orange-glow': 'conic-gradient(from 90deg at 50% 50%, #171717 0%, #262626 50%, #FF5500 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom Selection Color */
+        ::selection {
+            background-color: #FF5500;
+            color: white;
+        }
+
+        /* Premium Glass Effect */
+        .glass-panel {
+            background: rgba(23, 23, 23, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Placeholder Styles - Dark Mode */
+        .image-placeholder {
+            background-color: #111;
+            background-image: radial-gradient(#222 1px, transparent 1px);
+            background-size: 20px 20px;
+            border: 1px dashed #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: 500;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 1.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-placeholder::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, transparent, rgba(255, 85, 0, 0.05), transparent);
+            transform: translateX(-100%);
+            transition: 0.5s;
+        }
+
+        .image-placeholder:hover {
+            border-color: #FF5500;
+            color: white;
+            box-shadow: 0 0 30px -10px rgba(255, 85, 0, 0.3);
+        }
+
+        .image-placeholder:hover::after {
+            transform: translateX(100%);
+        }
+
+        /* Luxury Gradient Text */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #FF5500, #ff9100);
+        }
+
+        .text-gradient-white {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #ffffff, #a3a3a3);
+        }
+    </style>
+</head>
+
+<body class="bg-obsidian-950 font-sans text-gray-300 overflow-x-hidden antialiased">
+
+    <nav class="fixed w-full z-50 top-0 px-6 py-4 glass-panel border-b border-obsidian-700/50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="p24_logo.webp" alt="Prize24 Logo" class="h-10 w-auto">
+                <span class="text-2xl font-bold tracking-tighter text-white">Prize<span
+                        class="text-blaze-600">24</span></span>
+            </div>
+
+            <a href="vendors.html"
+                class="group flex items-center gap-3 px-6 py-2.5 bg-white text-obsidian-950 rounded-full font-bold text-sm tracking-wide hover:bg-blaze-500 hover:text-white transition-all duration-300 shadow-lg shadow-white/5 hover:shadow-blaze-600/20">
+                <span>For Businesses</span>
+                <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+            </a>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-6 md:pt-44 md:pb-32 relative overflow-hidden">
+        <div class="absolute top-0 right-0 -z-10 opacity-20 blur-[120px] pointer-events-none">
+            <div class="w-[600px] h-[600px] bg-blaze-600 rounded-full"></div>
+        </div>
+        <div class="absolute bottom-0 left-0 -z-10 opacity-10 blur-[100px] pointer-events-none">
+            <div class="w-[500px] h-[500px] bg-white rounded-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div
+                    class="inline-block px-4 py-1.5 rounded-full border border-obsidian-700 bg-obsidian-900/50 backdrop-blur-sm text-xs font-semibold uppercase tracking-widest text-blaze-500 mb-6">
+                    <i class="fa-solid fa-star mr-2"></i> The #1 Loyalty Network
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-bold mb-8 leading-[1.1] tracking-tight text-white">
+                    Shop Local. <br class="hidden md:block" />
+                    Keep Your Streak. <br class="hidden md:block" />
+                    <span class="text-gradient">Win Real Prizes.</span>
+                </h1>
+                <p class="text-xl text-gray-400 mb-10 leading-relaxed max-w-lg font-light">
+                    The first loyalty app where your progress never expires. Join the neighborhood alliance and unlock
+                    rewards you actually want.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button
+                        class="flex items-center gap-4 bg-white text-obsidian-950 px-8 py-4 rounded-xl hover:bg-gray-200 transition hover:-translate-y-1 duration-200 shadow-[0_0_20px_rgba(255,255,255,0.1)] group">
+                        <i class="fa-brands fa-apple text-3xl group-hover:scale-110 transition-transform"></i>
+                        <div class="text-left leading-tight">
+                            <div class="text-xs font-semibold uppercase tracking-wider opacity-60">Download on the</div>
+                            <div class="text-lg font-bold font-sans">App Store</div>
+                        </div>
+                    </button>
+                    <button
+                        class="flex items-center gap-4 bg-obsidian-800 border border-obsidian-700 text-white px-8 py-4 rounded-xl hover:border-blaze-600 hover:text-blaze-500 transition hover:-translate-y-1 duration-200 group">
+                        <i class="fa-brands fa-google-play text-3xl group-hover:scale-110 transition-transform"></i>
+                        <div class="text-left leading-tight">
+                            <div class="text-xs font-semibold uppercase tracking-wider opacity-60">Get it on</div>
+                            <div class="text-lg font-bold font-sans">Google Play</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative z-10">
+                <div
+                    class="absolute inset-0 border-2 border-blaze-600/20 rounded-[2.5rem] rotate-6 transform scale-105 z-0">
+                </div>
+
+                <div
+                    class="aspect-[4/5] shadow-2xl rounded-[2rem] bg-obsidian-900 border border-obsidian-700 relative z-10 overflow-hidden">
+                    <img src="streak.webp" alt="Prize24 App - My Streaks Dashboard" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-obsidian-900 px-6 border-t border-obsidian-800 relative">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div class="order-2 md:order-1">
+                <div class="aspect-square shadow-2xl rounded-[3rem] border border-obsidian-700 overflow-hidden">
+                    <img src="coffee.webp" alt="Premium coffee reward" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="order-1 md:order-2">
+                <h6 class="text-blaze-600 font-bold uppercase tracking-[0.2em] text-sm mb-6">Real Rewards</h6>
+                <h2 class="text-4xl lg:text-5xl font-bold mb-8 leading-tight text-white">Savings that feel like <span
+                        class="italic text-gray-500 font-serif">winning.</span></h2>
+
+                <div class="space-y-10">
+                    <div class="flex gap-6 group">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 bg-obsidian-800 border border-obsidian-700 text-blaze-500 rounded-2xl flex items-center justify-center text-2xl group-hover:border-blaze-600 group-hover:shadow-[0_0_15px_rgba(255,85,0,0.2)] transition-all duration-300">
+                            <i class="fa-solid fa-cookie-bite"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 text-white">Guaranteed Milestones</h3>
+                            <p class="text-gray-400 leading-relaxed">Earn tangible things you actually want (like a free
+                                cookie after 5 visits) instead of vague points.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 group">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 bg-obsidian-800 border border-obsidian-700 text-blaze-500 rounded-2xl flex items-center justify-center text-2xl group-hover:border-blaze-600 group-hover:shadow-[0_0_15px_rgba(255,85,0,0.2)] transition-all duration-300">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 text-white">Alliance Offers</h3>
+                            <p class="text-gray-400 leading-relaxed">Unlock deals across the network. Scanning at the
+                                gym might unlock an exclusive reward at the smoothie shop.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-obsidian-950 px-6 relative overflow-hidden">
+        <div
+            class="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-obsidian-700 to-transparent">
+        </div>
+
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+
+            <div class="relative z-10">
+                <h6 class="text-blaze-600 font-bold uppercase tracking-[0.2em] text-sm mb-6">The "Forever Streak"</h6>
+                <h2 class="text-4xl lg:text-5xl font-bold mb-8 leading-tight text-white">The only streak that
+                    <br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-white">never
+                        breaks.</span>
+                </h2>
+
+                <div class="space-y-10">
+                    <div class="flex gap-6">
+                        <div class="relative">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-br from-blaze-600 to-blaze-700 rounded-2xl flex items-center justify-center text-2xl text-white shadow-lg">
+                                <i class="fa-solid fa-shield-heart"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 text-white">Anxiety-Free Progress</h3>
+                            <p class="text-gray-400 leading-relaxed">Unlike other apps, the "Forever Streak" ensures you
+                                never lose your status if you miss a week.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6">
+                        <div
+                            class="w-16 h-16 bg-obsidian-800 border border-obsidian-700 text-white rounded-2xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 text-white">Gamified Engagement</h3>
+                            <p class="text-gray-400 leading-relaxed">Prize24 turns routine shopping into a game. Unlock
+                                levels, hit achievements, and compete locally.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-2xl border-l-4 border-l-blaze-600 italic text-gray-300">
+                        "I love that I don't have to stress about losing my progress if I go out of town. It feels
+                        premium and fair." <br>
+                        <span class="text-sm not-italic text-blaze-500 font-bold mt-2 block">- Sarah K., Verified
+                            User</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-blaze-600/10 rounded-full blur-3xl -z-10">
+                </div>
+                <div class="aspect-[4/5] shadow-2xl rounded-[3rem] border border-blaze-600/30 overflow-hidden">
+                    <iframe src="streak_animation.html" class="w-full h-full border-0"
+                        title="Streak Animation"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blaze-600 to-red-600 -z-20"></div>
+        <div
+            class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] -z-10 mix-blend-overlay">
+        </div>
+        <div class="absolute inset-0 bg-black/20 -z-10"></div>
+
+        <div class="max-w-4xl mx-auto text-center px-6 text-white">
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-8 tracking-tight">Start your streak today.</h2>
+            <p class="text-xl text-white/80 mb-12 leading-relaxed max-w-2xl mx-auto font-light">
+                Join thousands of locals supporting the best independent businesses in town and getting rewarded for it.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-5">
+                <button
+                    class="bg-obsidian-950 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-obsidian-900 transition shadow-2xl hover:scale-105 duration-200">
+                    <i class="fa-brands fa-apple mr-2"></i> Download for iOS
+                </button>
+                <button
+                    class="bg-white text-obsidian-950 px-10 py-5 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-2xl hover:scale-105 duration-200">
+                    <i class="fa-brands fa-google-play mr-2 text-blaze-600"></i> Download for Android
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-gray-500 py-16 px-6 border-t border-obsidian-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-6">
+                    <img src="p24_logo.webp" alt="Prize24 Logo" class="h-10 w-auto">
+                    <span class="text-2xl font-bold text-white tracking-tighter">Prize<span
+                            class="text-blaze-600">24</span></span>
+                </div>
+                <p class="mb-8 max-w-sm text-sm leading-7">The coalition loyalty network revitalizing Main Street
+                    through gamified retention and hyper-local alliances.</p>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 border border-obsidian-700 flex items-center justify-center rounded-full hover:border-blaze-600 hover:text-blaze-500 transition-all"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 border border-obsidian-700 flex items-center justify-center rounded-full hover:border-blaze-600 hover:text-blaze-500 transition-all"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 border border-obsidian-700 flex items-center justify-center rounded-full hover:border-blaze-600 hover:text-blaze-500 transition-all"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Platform</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-blaze-500 transition">About Us</a></li>
+                    <li><a href="vendors.html" class="hover:text-blaze-500 transition">For Business</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Legal</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="terms.html" class="hover:text-blaze-500 transition">Terms of Service</a></li>
+                    <li><a href="privacy.html" class="hover:text-blaze-500 transition">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto pt-8 border-t border-obsidian-800 flex flex-col md:flex-row justify-between items-center text-xs">
+            <p>© 2025 Kintlearn x AidSoft. All rights reserved.</p>
+            <div class="mt-4 md:mt-0 flex gap-6">
+                <span class="flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-green-500"></div> Systems Operational
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prize24 for Business - Grow Local.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        // Premium Black Palette
+                        obsidian: {
+                            950: '#050505', // Deepest background
+                            900: '#0a0a0a', // Secondary background
+                            800: '#171717', // Cards/Nav
+                            700: '#262626', // Borders
+                        },
+                        // Premium Orange Palette
+                        blaze: {
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#FF5500', // Primary Brand Color
+                            700: '#ea580c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom Selection Color */
+        ::selection {
+            background-color: #FF5500;
+            color: white;
+        }
+
+        /* Premium Glass Effect */
+        .glass-panel {
+            background: rgba(23, 23, 23, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Placeholder Styles - Dark Mode */
+        .image-placeholder {
+            background-color: #111;
+            background-image: radial-gradient(#222 1px, transparent 1px);
+            background-size: 20px 20px;
+            border: 1px dashed #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: 500;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 1.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-placeholder::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, transparent, rgba(255, 85, 0, 0.05), transparent);
+            transform: translateX(-100%);
+            transition: 0.5s;
+        }
+
+        .image-placeholder:hover {
+            border-color: #FF5500;
+            color: white;
+            box-shadow: 0 0 30px -10px rgba(255, 85, 0, 0.3);
+        }
+
+        .image-placeholder:hover::after {
+            transform: translateX(100%);
+        }
+
+        /* Luxury Gradient Text */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #FF5500, #ff9100);
+        }
+    </style>
+</head>
+
+<body class="bg-obsidian-950 font-sans text-gray-300 overflow-x-hidden antialiased">
+
+    <nav class="fixed w-full z-50 top-0 px-6 py-4 glass-panel border-b border-obsidian-700/50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="p24_logo.webp" alt="Prize24 Logo" class="h-10 w-auto">
+                <span class="text-2xl font-bold tracking-tighter text-white">Prize<span
+                        class="text-blaze-600">24</span></span>
+                <span class="text-gray-500 font-light text-lg">Partner</span>
+            </div>
+
+            <a href="index.html"
+                class="text-sm font-semibold text-gray-400 hover:text-white transition flex items-center gap-2 group">
+                For Customers <i
+                    class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform text-blaze-600"></i>
+            </a>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-6 md:pt-44 md:pb-32 relative overflow-hidden">
+        <div class="absolute top-0 right-0 -z-10 opacity-20 blur-[120px] pointer-events-none">
+            <div class="w-[600px] h-[600px] bg-blaze-600 rounded-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div
+                    class="inline-flex items-center gap-2 bg-obsidian-900 border border-obsidian-700 text-blaze-500 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest mb-6">
+                    <i class="fa-solid fa-store"></i> For Independent Businesses
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-bold mb-8 leading-[1.1] tracking-tight text-white">
+                    Stop renting your customers. <br />
+                    <span class="text-gradient">Start owning them.</span>
+                </h1>
+                <p class="text-xl text-gray-400 mb-10 leading-relaxed max-w-lg font-light">
+                    The zero-integration loyalty system that turns anonymous foot traffic into known regulars. Join the
+                    Main Street coalition.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#pricing"
+                        class="bg-white text-obsidian-950 px-10 py-4 rounded-xl font-bold text-center hover:bg-gray-200 transition shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:-translate-y-1 duration-200">
+                        Start Your Pilot
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative z-10">
+                <div
+                    class="absolute inset-0 border-2 border-blaze-600/20 rounded-[2rem] rotate-3 transform scale-105 z-0">
+                </div>
+
+                <div
+                    class="aspect-video shadow-2xl rounded-[1.5rem] border border-obsidian-700 relative z-10 overflow-hidden">
+                    <iframe src="analytics.html" class="w-full h-full border-0" title="Retention Analytics"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-obsidian-900 px-6 border-t border-obsidian-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white tracking-tight">Customer Retention & Growth
+                </h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-lg font-light">Big chains have teams of data scientists.
+                    You have <span class="text-white font-semibold">Prize24</span>.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="group p-8 rounded-[2rem] bg-obsidian-800 border border-obsidian-700 hover:border-blaze-600/50 transition-all duration-300 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]">
+                    <div
+                        class="w-14 h-14 bg-obsidian-950 border border-obsidian-700 text-blaze-500 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:text-white group-hover:bg-blaze-600 group-hover:border-blaze-600 transition-all">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Retention on Autopilot</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        A set-it-and-forget-it tool that automates returns. No more manual tracking or crumbling paper
+                        punch cards.
+                    </p>
+                </div>
+
+                <div
+                    class="group p-8 rounded-[2rem] bg-obsidian-800 border border-obsidian-700 hover:border-blaze-600/50 transition-all duration-300 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]">
+                    <div
+                        class="w-14 h-14 bg-obsidian-950 border border-obsidian-700 text-blaze-500 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:text-white group-hover:bg-blaze-600 group-hover:border-blaze-600 transition-all">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">High-Quality Loyalty</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        Shift focus away from "bargain hunters" to true loyalists who return for status, streaks, and
+                        community connection.
+                    </p>
+                </div>
+
+                <div
+                    class="group p-8 rounded-[2rem] bg-obsidian-800 border border-obsidian-700 hover:border-blaze-600/50 transition-all duration-300 hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]">
+                    <div
+                        class="w-14 h-14 bg-obsidian-950 border border-obsidian-700 text-blaze-500 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:text-white group-hover:bg-blaze-600 group-hover:border-blaze-600 transition-all">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Big-Chain Tech</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        Get the same powerful gamification tools (streaks, levels) used by Starbucks and Chipotle to
+                        level the playing field.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-obsidian-950 px-6 overflow-hidden relative">
+        <div
+            class="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-obsidian-800 to-transparent">
+        </div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <div class="inline-block text-blaze-600 font-bold tracking-[0.2em] uppercase mb-4 text-xs">The Network
+                    Effect</div>
+                <h2 class="text-4xl lg:text-5xl font-bold mb-10 text-white tracking-tight">The "Neighborhood <br>
+                    Alliance"</h2>
+
+                <div class="space-y-10">
+                    <div class="flex gap-6 group">
+                        <div
+                            class="w-12 h-12 flex items-center justify-center rounded-full bg-obsidian-900 border border-obsidian-700 text-blaze-600 group-hover:border-blaze-600 transition-colors">
+                            <i class="fa-solid fa-handshake text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2 text-white">Free Customer Acquisition</h4>
+                            <p class="text-gray-400">Cross-pollinate with nearby non-competing businesses. Imagine the
+                                yoga studio next door sending a push notification for <i>your</i> coffee shop.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 group">
+                        <div
+                            class="w-12 h-12 flex items-center justify-center rounded-full bg-obsidian-900 border border-obsidian-700 text-blaze-600 group-hover:border-blaze-600 transition-colors">
+                            <i class="fa-solid fa-location-dot text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2 text-white">Targeted Local Reach</h4>
+                            <p class="text-gray-400">Get listed on our hyper-local "City Guide." We drive traffic
+                                specifically from the surrounding community, avoiding wasted ad spend.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-radial from-blaze-900/20 to-transparent blur-3xl -z-10">
+                </div>
+
+                <div class="aspect-square rounded-[3rem] shadow-2xl border border-obsidian-700 overflow-hidden">
+                    <iframe src="globe.html" class="w-full h-full border-0" title="Global Shop Connections"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-black text-white px-6 border-t border-obsidian-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="order-2 md:order-1">
+                    <div
+                        class="aspect-[4/3] rounded-[2rem] border border-obsidian-800 overflow-hidden bg-obsidian-900 flex items-center justify-center">
+                        <img src="p24_logo.webp" alt="Prize24 QR Stand" class="w-full h-full object-contain p-8">
+                    </div>
+                </div>
+
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-10 tracking-tight">Operations & Cost</h2>
+
+                    <ul class="space-y-8">
+                        <li class="flex gap-6">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-blaze-600 to-blaze-700 flex items-center justify-center flex-shrink-0 shadow-lg shadow-blaze-900/20">
+                                <i class="fa-solid fa-bolt text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">"Zero-Integration" Setup</h4>
+                                <p class="text-gray-400 text-sm mt-2 font-light">Requires absolutely no technical
+                                    integration with complex POS systems; functions instantly via a simple QR scan.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-6">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-blaze-600 to-blaze-700 flex items-center justify-center flex-shrink-0 shadow-lg shadow-blaze-900/20">
+                                <i class="fa-solid fa-users-viewfinder text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">Solves "Invisible Customers"</h4>
+                                <p class="text-gray-400 text-sm mt-2 font-light">Transforms anonymous transactions into
+                                    known profiles. Identify who your top 20% of customers actually are.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-32 bg-obsidian-900 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-obsidian-950"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">Get Started Today</h2>
+            <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto font-light">
+                Join the network and start rewarding your customers.
+            </p>
+
+            <div class="glass-panel p-10 md:p-14 rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
+                <div
+                    class="absolute inset-0 bg-gradient-to-tr from-blaze-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
+
+                <div class="relative z-10">
+                    <div
+                        class="w-20 h-20 bg-obsidian-950 rounded-full flex items-center justify-center mx-auto mb-8 border border-obsidian-700 shadow-xl">
+                        <i class="fa-solid fa-tags text-4xl text-blaze-600"></i>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white mb-4">See Pricing & Plans in the App</h3>
+                    <p class="text-gray-400 mb-10 max-w-lg mx-auto font-light">
+                        To view our current subscription plans, offers, and to start your pilot, please download the
+                        <strong class="text-white">Prize24 App</strong>.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row justify-center gap-5">
+                        <button
+                            class="flex items-center justify-center gap-4 bg-white text-obsidian-950 px-8 py-4 rounded-xl hover:bg-gray-200 transition shadow-[0_0_20px_rgba(255,255,255,0.15)] w-full sm:w-auto hover:-translate-y-1 duration-200">
+                            <i class="fa-brands fa-apple text-2xl"></i>
+                            <div class="text-left leading-tight">
+                                <div class="text-xs font-semibold uppercase opacity-60">Prize24 App</div>
+                                <div class="text-base font-bold">Download on iOS</div>
+                            </div>
+                        </button>
+                        <button
+                            class="flex items-center justify-center gap-4 bg-obsidian-950 border border-obsidian-700 text-white px-8 py-4 rounded-xl hover:border-blaze-600 hover:text-blaze-500 transition w-full sm:w-auto hover:-translate-y-1 duration-200">
+                            <i class="fa-brands fa-google-play text-2xl"></i>
+                            <div class="text-left leading-tight">
+                                <div class="text-xs font-semibold uppercase opacity-60">Prize24 App</div>
+                                <div class="text-base font-bold">Get it on Android</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-gray-500 py-16 px-6 border-t border-obsidian-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <img src="p24_logo.webp" alt="Prize24 Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold text-white tracking-tighter">Prize<span
+                            class="text-blaze-600">24</span></span>
+                </div>
+                <p class="text-sm max-w-xs leading-6">Empowering local businesses with Fortune 500 tech. Built for Main
+                    Street, not Wall Street.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 text-sm">
+                <a href="terms.html" class="hover:text-blaze-500 transition">Terms of Service</a>
+                <a href="privacy.html" class="hover:text-blaze-500 transition">Privacy Policy</a>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto pt-8 mt-8 border-t border-obsidian-800 text-xs text-center md:text-left text-gray-600 flex flex-col md:flex-row justify-between">
+            <p>© 2025 Kintlearn x AidSoft. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
