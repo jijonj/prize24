@@ -144,6 +144,21 @@
             color: transparent;
             background-image: linear-gradient(to right, #ffffff, #a3a3a3);
         }
+
+        /* Step Connector Line */
+        @media (min-width: 1024px) {
+            .step-connector::after {
+                content: '';
+                position: absolute;
+                top: 72px;
+                left: calc(50% + 72px);
+                width: calc(100% - 144px);
+                height: 2px;
+                background: linear-gradient(to right, rgba(255, 85, 0, 0.5), rgba(255, 85, 0, 0.15));
+                z-index: 0;
+                pointer-events: none;
+            }
+        }
     </style>
 </head>
 
@@ -248,7 +263,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 relative">
 
                 <!-- Step 1 -->
-                <div class="group relative flex flex-col items-center text-center">
+                <div class="group relative flex flex-col items-center text-center step-connector">
                     <div class="relative mb-8">
                         <div
                             class="absolute inset-0 scale-[1.3] bg-blaze-600/0 group-hover:bg-blaze-600/10 rounded-full blur-xl transition-all duration-500">
@@ -270,15 +285,9 @@
                         QR code for the vendor to scan at checkout.</p>
                 </div>
 
-                <!-- Arrow 1→2 -->
-                <div
-                    class="flex items-start justify-center lg:absolute lg:left-[25%] lg:top-[60px] lg:-translate-x-1/2 lg:z-20 my-4 lg:my-0">
-                    <i
-                        class="fa-solid fa-chevron-right text-2xl text-blaze-600 drop-shadow-[0_0_8px_rgba(255,85,0,0.4)] rotate-90 lg:rotate-0"></i>
-                </div>
 
                 <!-- Step 2 -->
-                <div class="group relative flex flex-col items-center text-center">
+                <div class="group relative flex flex-col items-center text-center step-connector">
                     <div class="relative mb-8">
                         <div
                             class="absolute inset-0 scale-[1.3] bg-blaze-600/0 group-hover:bg-blaze-600/10 rounded-full blur-xl transition-all duration-500">
@@ -300,15 +309,9 @@
                         Watch your progress grow with every scan.</p>
                 </div>
 
-                <!-- Arrow 2→3 -->
-                <div
-                    class="flex items-start justify-center lg:absolute lg:left-[50%] lg:top-[60px] lg:-translate-x-1/2 lg:z-20 my-4 lg:my-0">
-                    <i
-                        class="fa-solid fa-chevron-right text-2xl text-blaze-600 drop-shadow-[0_0_8px_rgba(255,85,0,0.4)] rotate-90 lg:rotate-0"></i>
-                </div>
 
                 <!-- Step 3 -->
-                <div class="group relative flex flex-col items-center text-center">
+                <div class="group relative flex flex-col items-center text-center step-connector">
                     <div class="relative mb-8">
                         <div
                             class="absolute inset-0 scale-[1.3] bg-blaze-600/0 group-hover:bg-blaze-600/10 rounded-full blur-xl transition-all duration-500">
@@ -330,12 +333,6 @@
                         guaranteed real prizes — no luck required.</p>
                 </div>
 
-                <!-- Arrow 3→4 -->
-                <div
-                    class="flex items-start justify-center lg:absolute lg:left-[75%] lg:top-[60px] lg:-translate-x-1/2 lg:z-20 my-4 lg:my-0">
-                    <i
-                        class="fa-solid fa-chevron-right text-2xl text-blaze-600 drop-shadow-[0_0_8px_rgba(255,85,0,0.4)] rotate-90 lg:rotate-0"></i>
-                </div>
 
                 <!-- Step 4 -->
                 <div class="group relative flex flex-col items-center text-center">
