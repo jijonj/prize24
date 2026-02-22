@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prize24 - QR Display Card (4x6)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        // Premium Black Palette
+                        obsidian: {
+                            950: '#050505',
+                            900: '#0a0a0a',
+                            800: '#171717',
+                            700: '#262626',
+                        },
+                        // Premium Orange Palette
+                        blaze: {
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#FF5500',
+                            700: '#ea580c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Base preview background */
+        body {
+            background-color: #050505;
+            background-image: radial-gradient(circle at 50% 50%, #171717 0%, #050505 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* The 4x6 Physical Card Container */
+        .qr-card {
+            width: 4in;
+            height: 6in;
+            background: linear-gradient(135deg, #0a0a0a 0%, #171717 100%);
+            position: relative;
+            overflow: hidden;
+            /* Mockup presentation styles (ignored in print) */
+            box-shadow:
+                0 25px 50px -12px rgba(0, 0, 0, 0.8),
+                0 0 0 1px rgba(255, 255, 255, 0.05),
+                inset 0 1px 1px rgba(255, 255, 255, 0.15);
+            border-radius: 1.5rem;
+            /* Soft corners for an acrylic stand feel */
+        }
+
+        /* Animated glowing background elements */
+        .qr-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 50% 0%, rgba(255, 85, 0, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .glow-orb {
+            position: absolute;
+            width: 2.5in;
+            height: 2.5in;
+            background: #FF5500;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .glow-top-right {
+            top: -1in;
+            right: -1in;
+        }
+
+        .glow-bottom-left {
+            bottom: -1in;
+            left: -1in;
+        }
+
+        /* Scanning Brackets Animation */
+        .scan-bracket {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-color: #FF5500;
+            border-style: solid;
+            z-index: 20;
+        }
+
+        .bracket-tl {
+            top: -4px;
+            left: -4px;
+            border-width: 3px 0 0 3px;
+            border-top-left-radius: 8px;
+        }
+
+        .bracket-tr {
+            top: -4px;
+            right: -4px;
+            border-width: 3px 3px 0 0;
+            border-top-right-radius: 8px;
+        }
+
+        .bracket-bl {
+            bottom: -4px;
+            left: -4px;
+            border-width: 0 0 3px 3px;
+            border-bottom-left-radius: 8px;
+        }
+
+        .bracket-br {
+            bottom: -4px;
+            right: -4px;
+            border-width: 0 3px 3px 0;
+            border-bottom-right-radius: 8px;
+        }
+
+        /* Luxury Gradient Text */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #ffffff, #a3a3a3);
+        }
+
+        .text-gradient-orange {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #FF5500, #ff9100);
+        }
+
+        /* --- PRINT STYLES --- */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .text-gradient-orange {
+                background: transparent !important;
+                color: #FF5500 !important;
+                -webkit-text-fill-color: #FF5500 !important;
+            }
+
+            @page {
+                size: 4in 6in;
+                margin: 0;
+            }
+
+            body {
+                background: none;
+                display: block;
+            }
+
+            .qr-card {
+                box-shadow: none;
+                border-radius: 0;
+                /* Sharp corners for printing/cutting */
+                border: none;
+                width: 100vw;
+                height: 100vh;
+                margin: 0;
+            }
+
+            /* Hide the browser preview text during print */
+            .preview-text {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-white">
+
+    <!-- Floating preview text (Hidden on print) -->
+    <div class="preview-text absolute top-8 left-1/2 -translate-x-1/2 text-center z-50">
+        <h2 class="text-white font-bold text-xl mb-1">Print-Ready 4"x6" Display</h2>
+        <p class="text-gray-400 text-sm">Press <kbd
+                class="bg-obsidian-800 px-2 py-1 rounded text-white font-mono text-xs">Ctrl+P</kbd> or <kbd
+                class="bg-obsidian-800 px-2 py-1 rounded text-white font-mono text-xs">Cmd+P</kbd> to print actual size.
+        </p>
+    </div>
+
+    <!-- 4x6 Physical Card Container -->
+    <div class="qr-card flex flex-col items-center justify-between p-[0.3in]">
+
+        <!-- Ambient Glows -->
+        <div class="glow-orb glow-top-right"></div>
+        <div class="glow-orb glow-bottom-left"></div>
+
+        <!-- Inner Content relative wrapper -->
+        <div class="relative z-10 w-full h-full flex flex-col items-center text-center">
+
+            <!-- HEADER -->
+            <div class="w-full flex flex-col items-center mt-2 mb-3">
+                <img src="p24_logo.webp" alt="Prize24 Logo" class="h-16 w-auto mb-1">
+                <span class="text-2xl font-bold tracking-tighter text-white leading-none">Prize<span
+                        class="text-blaze-600">24</span></span>
+            </div>
+
+            <!-- HEADLINE -->
+            <div class="mb-auto">
+                <h1 class="text-[0.32in] font-extrabold leading-[1.1] tracking-tight text-white mb-1">
+                    Start Your <br />
+                    <span class="text-gradient-orange">Forever Streak.</span>
+                </h1>
+                <p class="text-[0.12in] text-gray-400 font-medium px-4">
+                    Scan to unlock real rewards.
+                </p>
+            </div>
+
+            <!-- QR CODE AREA -->
+            <div class="relative w-[2.2in] h-[2.2in] my-3 flex-shrink-0">
+                <!-- Outer Glowing ring -->
+                <div class="absolute inset-0 bg-blaze-600 rounded-3xl blur-xl opacity-20"></div>
+
+                <!-- White QR Background Box -->
+                <div
+                    class="relative w-full h-full bg-white rounded-2xl p-3 shadow-2xl flex items-center justify-center border-4 border-obsidian-800">
+
+                    <!-- Tech Brackets -->
+                    <div class="scan-bracket bracket-tl"></div>
+                    <div class="scan-bracket bracket-tr"></div>
+                    <div class="scan-bracket bracket-bl"></div>
+                    <div class="scan-bracket bracket-br"></div>
+
+                    <!-- The QR Code Image (API generated for prize24.app) -->
+                    <!-- Using a high-res generation, rendering crisp inside the box -->
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https://prize24.app/&color=050505&bgcolor=ffffff&qzone=1"
+                        alt="Scan to visit Prize24.app"
+                        class="w-full h-full object-contain rounded-lg mix-blend-multiply" />
+                </div>
+            </div>
+
+            <!-- VISIT PRIZE24.APP TEXT -->
+            <p class="text-[0.13in] text-white font-medium tracking-wide mb-2 mt-1">
+                visit <span class="text-blaze-500 font-bold">prize24.app</span>
+            </p>
+
+            <!-- FOOTER -->
+            <div class="mt-auto w-full flex flex-col items-center pt-4 border-t border-obsidian-700/50">
+                <div
+                    class="flex items-center justify-center gap-2 text-[0.1in] font-bold uppercase tracking-[0.15em] text-blaze-500 mb-1">
+                    <i class="fa-solid fa-camera-viewfinder animate-pulse"></i>
+                    <span>Point Camera Here</span>
+                </div>
+                <p class="text-[0.09in] text-gray-500 font-light tracking-wide">
+                    Download from App Store or Play Store to start
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

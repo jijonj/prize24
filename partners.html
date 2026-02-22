@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="public, max-age=0, must-revalidate">
+    <title>Prize24 - Find Partners</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="p24_logo.webp">
+    <link rel="apple-touch-icon" href="p24_logo.webp">
+
+    <!-- Preconnect to external CDNs for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <script src="tailwind.js?v=3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        obsidian: {
+                            950: '#050505',
+                            900: '#0a0a0a',
+                            800: '#171717',
+                            700: '#262626',
+                        },
+                        blaze: {
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#FF5500',
+                            700: '#ea580c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+
+    <style>
+        ::selection {
+            background-color: #FF5500;
+            color: white;
+        }
+
+        .glass-panel {
+            background: rgba(23, 23, 23, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #FF5500, #ff9100);
+        }
+
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+            background-repeat: no-repeat;
+            background-position-x: 95%;
+            background-position-y: 50%;
+        }
+    </style>
+</head>
+
+<body class="bg-obsidian-950 font-sans text-gray-300 overflow-x-hidden antialiased">
+
+    <nav class="fixed w-full z-50 top-0 px-6 py-4 glass-panel border-b border-obsidian-700/50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="p24_logo.webp" alt="Prize24 Logo" class="h-10 w-auto">
+                <span class="text-2xl font-bold tracking-tighter text-white">Prize<span
+                        class="text-blaze-600">24</span></span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center gap-1">
+                <a href="index.html"
+                    class="relative px-5 py-2.5 text-sm font-semibold text-gray-400 hover:text-white transition-colors duration-300 rounded-lg hover:bg-white/5">
+                    <i class="fa-solid fa-house mr-2"></i>Home
+                </a>
+                <a href="partners.html"
+                    class="relative px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-300 rounded-lg hover:bg-white/5">
+                    <i class="fa-solid fa-location-dot mr-2 text-blaze-500"></i>Find Partners
+                    <span
+                        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-0.5 bg-blaze-600 rounded-full"></span>
+                </a>
+                <a href="vendors.html"
+                    class="relative px-5 py-2.5 text-sm font-semibold text-gray-400 hover:text-white transition-colors duration-300 rounded-lg hover:bg-white/5">
+                    <i class="fa-solid fa-store mr-2"></i>For Businesses
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="nav-toggle" class="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-white/5 transition"
+                aria-label="Toggle menu">
+                <span class="block w-6 h-0.5 bg-white rounded-full transition-all duration-300" id="bar1"></span>
+                <span class="block w-6 h-0.5 bg-white rounded-full transition-all duration-300" id="bar2"></span>
+                <span class="block w-4 h-0.5 bg-blaze-500 rounded-full transition-all duration-300" id="bar3"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-obsidian-700/50 pt-4">
+            <div class="flex flex-col gap-2">
+                <a href="index.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-400 hover:text-white hover:bg-white/5 font-semibold text-sm transition-all duration-200">
+                    <i class="fa-solid fa-house"></i>Home
+                </a>
+                <a href="partners.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl bg-blaze-600/10 text-white font-semibold text-sm border border-blaze-600/20">
+                    <i class="fa-solid fa-location-dot text-blaze-500"></i>Find Partners
+                </a>
+                <a href="vendors.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-400 hover:text-white hover:bg-white/5 font-semibold text-sm transition-all duration-200">
+                    <i class="fa-solid fa-store"></i>For Businesses
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-12 px-6 md:pt-44 relative overflow-hidden">
+        <div class="absolute top-0 right-0 -z-10 opacity-10 blur-[120px] pointer-events-none">
+            <div class="w-[600px] h-[600px] bg-blaze-600 rounded-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto text-center">
+            <div
+                class="inline-flex items-center gap-2 bg-obsidian-900 border border-obsidian-700 text-blaze-500 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest mb-6">
+                <i class="fa-solid fa-map"></i> Network Directory
+            </div>
+            <h1 class="text-4xl lg:text-6xl font-bold mb-6 text-white tracking-tight">
+                Find Our <span class="text-gradient">Partners</span>
+            </h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto font-light mb-12">
+                Discover independent businesses in the neighborhood alliance and start growing your "Forever Streak".
+            </p>
+
+            <!-- Filters -->
+            <div
+                class="glass-panel rounded-[2rem] p-6 max-w-5xl mx-auto flex flex-col md:flex-row gap-6 shadow-2xl relative z-20">
+                <div class="flex-1 text-left relative">
+                    <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 pl-1"><i
+                            class="fa-solid fa-globe mr-1 text-blaze-500"></i> Country</label>
+                    <select id="country-filter"
+                        class="w-full bg-obsidian-900 border border-obsidian-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-blaze-500 transition-colors shadow-inner">
+                        <option value="">All Countries</option>
+                    </select>
+                </div>
+                <div class="flex-1 text-left">
+                    <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 pl-1"><i
+                            class="fa-solid fa-map-pin mr-1 text-blaze-500"></i> State / Region</label>
+                    <select id="state-filter"
+                        class="w-full bg-obsidian-900 border border-obsidian-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-blaze-500 transition-colors shadow-inner disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled>
+                        <option value="">All States</option>
+                    </select>
+                </div>
+                <div class="flex-1 text-left">
+                    <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 pl-1"><i
+                            class="fa-solid fa-city mr-1 text-blaze-500"></i> District / City</label>
+                    <select id="district-filter"
+                        class="w-full bg-obsidian-900 border border-obsidian-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-blaze-500 transition-colors shadow-inner disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled>
+                        <option value="">All Districts</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid -->
+    <section class="py-12 px-6 pb-32">
+        <div class="max-w-7xl mx-auto min-h-[40vh]">
+            <div class="flex justify-between items-center mb-8 border-b border-obsidian-800 pb-4">
+                <h2 class="text-xl font-bold text-white">Partner Shops</h2>
+                <span id="results-count"
+                    class="text-sm font-semibold text-gray-500 bg-obsidian-900 px-3 py-1 rounded-full border border-obsidian-800">0
+                    shops found</span>
+            </div>
+
+            <div id="partners-grid"
+                class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
+                <!-- Javascript will inject here -->
+            </div>
+
+            <div id="pagination-controls" class="mt-12 flex justify-center items-center gap-2 hidden">
+                <!-- Javascript will inject pagination here -->
+            </div>
+
+            <div id="no-results"
+                class="hidden text-center py-20 bg-obsidian-900/50 rounded-3xl border border-obsidian-800 border-dashed">
+                <div
+                    class="w-20 h-20 bg-obsidian-800 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl text-gray-500">
+                    <i class="fa-solid fa-store-slash"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">No partners found</h3>
+                <p class="text-gray-500 max-w-sm mx-auto">Try adjusting your filters or search in a different area to
+                    find partner shops.</p>
+                <button id="reset-filters"
+                    class="mt-6 text-sm text-blaze-500 font-semibold hover:text-blaze-400 transition-colors">Reset All
+                    Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-gray-500 py-16 px-6 border-t border-obsidian-800">
+        <!-- Exact matching footer -->
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-2 mb-6">
+                    <img src="p24_logo.webp" alt="Prize24 Logo" class="h-10 w-auto">
+                    <span class="text-2xl font-bold text-white tracking-tighter">Prize<span
+                            class="text-blaze-600">24</span></span>
+                </div>
+                <p class="mb-8 max-w-sm text-sm leading-7">The coalition loyalty network revitalizing Main Street
+                    through gamified retention and hyper-local alliances.</p>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Platform</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-blaze-500 transition">About Us</a></li>
+                    <li><a href="partners.html" class="hover:text-blaze-500 transition text-blaze-500">Find Partners</a>
+                    </li>
+                    <li><a href="vendors.html" class="hover:text-blaze-500 transition">For Business</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Legal</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="terms.html" class="hover:text-blaze-500 transition">Terms of Service</a></li>
+                    <li><a href="privacy.html" class="hover:text-blaze-500 transition">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto pt-8 border-t border-obsidian-800 flex flex-col md:flex-row justify-between items-center text-xs">
+            <p>© 2025 Kintlearn x AidSoft. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script for mobile menu -->
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Script for Partner Filtering Directory -->
+    <script>
+        // Data loaded asynchronously from JSON
+        let partners = [];
+
+        // DOM Elements
+        const elCountry = document.getElementById('country-filter');
+        const elState = document.getElementById('state-filter');
+        const elDistrict = document.getElementById('district-filter');
+        const grid = document.getElementById('partners-grid');
+        const noResults = document.getElementById('no-results');
+        const resultsCount = document.getElementById('results-count');
+        const btnReset = document.getElementById('reset-filters');
+        const paginationControls = document.getElementById('pagination-controls');
+
+        // State Filters
+        let activeCountry = '';
+        let activeState = '';
+        let activeDistrict = '';
+
+        // Pagination State
+        let currentPage = 1;
+        const itemsPerPage = 24;
+        let filteredPartners = [];
+
+        // Show loading skeleton while data loads
+        function showLoading() {
+            grid.innerHTML = '';
+            resultsCount.textContent = 'Loading...';
+            for (let i = 0; i < 12; i++) {
+                const skeleton = document.createElement('div');
+                skeleton.className = "bg-obsidian-900 border border-obsidian-800 rounded-2xl p-4 flex flex-col items-center justify-center text-center animate-pulse";
+                skeleton.innerHTML = `
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-obsidian-800 rounded-full mb-3"></div>
+                    <div class="h-4 w-20 bg-obsidian-800 rounded mb-2"></div>
+                    <div class="h-3 w-14 bg-obsidian-800 rounded"></div>
+                `;
+                grid.appendChild(skeleton);
+            }
+        }
+
+        // Show error state
+        function showError() {
+            grid.innerHTML = '';
+            paginationControls.classList.add('hidden');
+            resultsCount.textContent = 'Error';
+            noResults.classList.remove('hidden');
+            noResults.querySelector('h3').textContent = 'Failed to load partners';
+            noResults.querySelector('p').textContent = 'Please check your connection and try again.';
+        }
+
+        // Load partners from JSON file
+        async function loadPartners() {
+            showLoading();
+            try {
+                const response = await fetch('partners.json');
+                if (!response.ok) throw new Error('Network response was not ok');
+                partners = await response.json();
+                filteredPartners = partners;
+                populateCountries();
+                renderGrid();
+
+                // Event Listeners
+                elCountry.addEventListener('change', (e) => {
+                    activeCountry = e.target.value;
+                    activeState = '';
+                    activeDistrict = '';
+
+                    populateStates();
+                    elDistrict.innerHTML = '<option value="">All Districts</option>';
+                    elDistrict.disabled = true;
+
+                    applyFilters();
+                });
+
+                elState.addEventListener('change', (e) => {
+                    activeState = e.target.value;
+                    activeDistrict = '';
+
+                    populateDistricts();
+                    applyFilters();
+                });
+
+                elDistrict.addEventListener('change', (e) => {
+                    activeDistrict = e.target.value;
+                    applyFilters();
+                });
+
+                btnReset.addEventListener('click', () => {
+                    elCountry.value = '';
+                    elCountry.dispatchEvent(new Event('change'));
+                });
+            } catch (error) {
+                console.error('Failed to load partners:', error);
+                showError();
+            }
+        }
+        function getUnique(data, key) {
+            return [...new Set(data.map(item => item[key]))].sort();
+        }
+
+        // Dropdown Builders
+        function populateCountries() {
+            const countries = getUnique(partners, 'country');
+            countries.forEach(c => {
+                const opt = document.createElement('option');
+                opt.value = c;
+                opt.textContent = c;
+                elCountry.appendChild(opt);
+            });
+        }
+
+        function populateStates() {
+            elState.innerHTML = '<option value="">All States</option>';
+            if (!activeCountry) {
+                elState.disabled = true;
+                return;
+            }
+
+            const filteredByCountry = partners.filter(p => p.country === activeCountry);
+            const states = getUnique(filteredByCountry, 'state');
+
+            states.forEach(s => {
+                const opt = document.createElement('option');
+                opt.value = s;
+                opt.textContent = s;
+                elState.appendChild(opt);
+            });
+
+            elState.disabled = false;
+        }
+
+        function populateDistricts() {
+            elDistrict.innerHTML = '<option value="">All Districts</option>';
+            if (!activeState) {
+                elDistrict.disabled = true;
+                return;
+            }
+
+            const filteredByState = partners.filter(p => p.country === activeCountry && p.state === activeState);
+            const districts = getUnique(filteredByState, 'district');
+
+            districts.forEach(d => {
+                const opt = document.createElement('option');
+                opt.value = d;
+                opt.textContent = d;
+                elDistrict.appendChild(opt);
+            });
+
+            elDistrict.disabled = false;
+        }
+
+        // Filtering
+        function applyFilters() {
+            filteredPartners = partners;
+
+            if (activeCountry) {
+                filteredPartners = filteredPartners.filter(p => p.country === activeCountry);
+            }
+            if (activeState) {
+                filteredPartners = filteredPartners.filter(p => p.state === activeState);
+            }
+            if (activeDistrict) {
+                filteredPartners = filteredPartners.filter(p => p.district === activeDistrict);
+            }
+
+            currentPage = 1;
+            renderGrid();
+        }
+
+        // Render Cards
+        function renderGrid() {
+            grid.innerHTML = '';
+            resultsCount.textContent = `${filteredPartners.length} shop${filteredPartners.length !== 1 ? 's' : ''} found`;
+
+            if (filteredPartners.length === 0) {
+                grid.classList.add('hidden');
+                paginationControls.classList.add('hidden');
+                noResults.classList.remove('hidden');
+            } else {
+                grid.classList.remove('hidden');
+                noResults.classList.add('hidden');
+
+                const startIndex = (currentPage - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                const currentData = filteredPartners.slice(startIndex, endIndex);
+
+                currentData.forEach(p => {
+                    const card = document.createElement('a');
+                    card.href = p.website;
+                    card.target = "_blank";
+                    card.rel = "noopener noreferrer";
+                    card.className = "bg-obsidian-900 border border-obsidian-800 rounded-2xl p-4 flex flex-col items-center justify-center text-center hover:bg-obsidian-800 hover:border-blaze-500 transition-all duration-300 group shadow-lg hover:-translate-y-1 relative overflow-hidden";
+
+                    card.innerHTML = `
+                        <!-- Hover glow -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-blaze-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-obsidian-950 rounded-full border border-obsidian-700 p-1 mb-3 group-hover:border-blaze-500 transition-colors shadow-inner relative z-10">
+                            <img src="${p.logo}" alt="${p.name} Logo" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-white text-sm leading-tight mb-1 relative z-10 line-clamp-1">${p.name}</h3>
+                        <p class="text-[10px] md:text-xs text-gray-500 font-semibold uppercase tracking-wider relative z-10 flex items-center gap-1">
+                            <i class="fa-solid fa-tag text-blaze-600"></i> ${p.category}
+                        </p>
+                    `;
+                    grid.appendChild(card);
+                });
+
+                renderPagination();
+            }
+        }
+
+        function renderPagination() {
+            const totalPages = Math.ceil(filteredPartners.length / itemsPerPage);
+            paginationControls.innerHTML = '';
+
+            if (totalPages <= 1) {
+                paginationControls.classList.add('hidden');
+                return;
+            }
+
+            paginationControls.classList.remove('hidden');
+
+            // Prev Button
+            const prevBtn = document.createElement('button');
+            prevBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+            prevBtn.className = `w-10 h-10 rounded-full flex items-center justify-center border border-obsidian-700 transition-colors ${currentPage === 1 ? 'text-gray-600 cursor-not-allowed bg-obsidian-900' : 'text-white hover:bg-blaze-600 hover:border-blaze-600 bg-obsidian-800'}`;
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderGrid();
+                    window.scrollTo({ top: document.getElementById('partners-grid').offsetTop - 100, behavior: 'smooth' });
+                }
+            });
+            paginationControls.appendChild(prevBtn);
+
+            // Page Numbers
+            for (let i = 1; i <= totalPages; i++) {
+                const pageBtn = document.createElement('button');
+                pageBtn.textContent = i;
+                if (i === currentPage) {
+                    pageBtn.className = 'w-10 h-10 rounded-full flex items-center justify-center bg-blaze-600 text-white font-bold border border-blaze-600 shadow-lg shadow-blaze-600/30';
+                } else {
+                    pageBtn.className = 'w-10 h-10 rounded-full flex items-center justify-center border border-obsidian-700 text-gray-400 bg-obsidian-900 hover:bg-obsidian-800 hover:text-white transition-colors';
+                }
+
+                pageBtn.addEventListener('click', () => {
+                    currentPage = i;
+                    renderGrid();
+                    window.scrollTo({ top: document.getElementById('partners-grid').offsetTop - 100, behavior: 'smooth' });
+                });
+
+                paginationControls.appendChild(pageBtn);
+            }
+
+            // Next Button
+            const nextBtn = document.createElement('button');
+            nextBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
+            nextBtn.className = `w-10 h-10 rounded-full flex items-center justify-center border border-obsidian-700 transition-colors ${currentPage === totalPages ? 'text-gray-600 cursor-not-allowed bg-obsidian-900' : 'text-white hover:bg-blaze-600 hover:border-blaze-600 bg-obsidian-800'}`;
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderGrid();
+                    window.scrollTo({ top: document.getElementById('partners-grid').offsetTop - 100, behavior: 'smooth' });
+                }
+            });
+            paginationControls.appendChild(nextBtn);
+        }
+
+        // Run
+        loadPartners();
+    </script>
+    <!-- Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6999ac55dec0fa1c36f45498/1ji04ibm8';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script -->
+</body>
+
+</html>

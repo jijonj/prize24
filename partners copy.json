@@ -1,0 +1,302 @@
+[
+    {
+        "id": 1,
+        "name": "Brew City Coffee",
+        "logo": "https://ui-avatars.com/api/?name=BC&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United States",
+        "state": "New York",
+        "district": "Manhattan",
+        "category": "Cafe"
+    },
+    {
+        "id": 2,
+        "name": "Muscle Hub Gym",
+        "logo": "https://ui-avatars.com/api/?name=MH&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United States",
+        "state": "New York",
+        "district": "Brooklyn",
+        "category": "Fitness"
+    },
+    {
+        "id": 3,
+        "name": "Fresh Bites",
+        "logo": "https://ui-avatars.com/api/?name=FB&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United States",
+        "state": "California",
+        "district": "Los Angeles",
+        "category": "Restaurant"
+    },
+    {
+        "id": 4,
+        "name": "Tech Fix",
+        "logo": "https://ui-avatars.com/api/?name=TF&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "India",
+        "state": "Kerala",
+        "district": "Ernakulam",
+        "category": "Electronics"
+    },
+    {
+        "id": 5,
+        "name": "Spice Route",
+        "logo": "https://ui-avatars.com/api/?name=SR&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "India",
+        "state": "Kerala",
+        "district": "Trivandrum",
+        "category": "Restaurant"
+    },
+    {
+        "id": 6,
+        "name": "Kochi Books",
+        "logo": "https://ui-avatars.com/api/?name=KB&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "India",
+        "state": "Kerala",
+        "district": "Ernakulam",
+        "category": "Retail"
+    },
+    {
+        "id": 7,
+        "name": "London Calling",
+        "logo": "https://ui-avatars.com/api/?name=LC&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United Kingdom",
+        "state": "England",
+        "district": "London",
+        "category": "Pub"
+    },
+    {
+        "id": 8,
+        "name": "Bake My Day",
+        "logo": "https://ui-avatars.com/api/?name=BM&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United Kingdom",
+        "state": "England",
+        "district": "Manchester",
+        "category": "Bakery"
+    },
+    {
+        "id": 9,
+        "name": "Mumbai Threads",
+        "logo": "https://ui-avatars.com/api/?name=MT&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "India",
+        "state": "Maharashtra",
+        "district": "Mumbai",
+        "category": "Apparel"
+    },
+    {
+        "id": 10,
+        "name": "The Auto Shop",
+        "logo": "https://ui-avatars.com/api/?name=AS&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United States",
+        "state": "California",
+        "district": "San Francisco",
+        "category": "Auto"
+    },
+    {
+        "id": 11,
+        "name": "Vegan Eats",
+        "logo": "https://ui-avatars.com/api/?name=VE&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United States",
+        "state": "California",
+        "district": "Los Angeles",
+        "category": "Restaurant"
+    },
+    {
+        "id": 12,
+        "name": "Delhi Sweets",
+        "logo": "https://ui-avatars.com/api/?name=DS&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "India",
+        "state": "Delhi",
+        "district": "New Delhi",
+        "category": "Bakery"
+    },
+    {
+        "id": 13,
+        "name": "Empire Pizza",
+        "logo": "https://ui-avatars.com/api/?name=EP&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United States",
+        "state": "New York",
+        "district": "Manhattan",
+        "category": "Restaurant"
+    },
+    {
+        "id": 14,
+        "name": "Malabar Cafe",
+        "logo": "https://ui-avatars.com/api/?name=MC&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "India",
+        "state": "Kerala",
+        "district": "Kozhikode",
+        "category": "Cafe"
+    },
+    {
+        "id": 15,
+        "name": "Rainbow Cafe",
+        "logo": "https://ui-avatars.com/api/?name=RC&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "India",
+        "state": "Kerala",
+        "district": "Thrissur",
+        "category": "Cafe"
+    },
+    {
+        "id": 16,
+        "name": "Brew City Coffee",
+        "logo": "https://ui-avatars.com/api/?name=BC&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United States",
+        "state": "New York",
+        "district": "Manhattan",
+        "category": "Cafe"
+    },
+    {
+        "id": 17,
+        "name": "Muscle Hub Gym",
+        "logo": "https://ui-avatars.com/api/?name=MH&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United States",
+        "state": "New York",
+        "district": "Brooklyn",
+        "category": "Fitness"
+    },
+    {
+        "id": 18,
+        "name": "Fresh Bites",
+        "logo": "https://ui-avatars.com/api/?name=FB&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United States",
+        "state": "California",
+        "district": "Los Angeles",
+        "category": "Restaurant"
+    },
+    {
+        "id": 19,
+        "name": "Tech Fix",
+        "logo": "https://ui-avatars.com/api/?name=TF&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "India",
+        "state": "Kerala",
+        "district": "Ernakulam",
+        "category": "Electronics"
+    },
+    {
+        "id": 20,
+        "name": "Spice Route",
+        "logo": "https://ui-avatars.com/api/?name=SR&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "India",
+        "state": "Kerala",
+        "district": "Trivandrum",
+        "category": "Restaurant"
+    },
+    {
+        "id": 21,
+        "name": "Kochi Books",
+        "logo": "https://ui-avatars.com/api/?name=KB&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "India",
+        "state": "Kerala",
+        "district": "Ernakulam",
+        "category": "Retail"
+    },
+    {
+        "id": 22,
+        "name": "London Calling",
+        "logo": "https://ui-avatars.com/api/?name=LC&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United Kingdom",
+        "state": "England",
+        "district": "London",
+        "category": "Pub"
+    },
+    {
+        "id": 23,
+        "name": "Bake My Day",
+        "logo": "https://ui-avatars.com/api/?name=BM&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United Kingdom",
+        "state": "England",
+        "district": "Manchester",
+        "category": "Bakery"
+    },
+    {
+        "id": 24,
+        "name": "Mumbai Threads",
+        "logo": "https://ui-avatars.com/api/?name=MT&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "India",
+        "state": "Maharashtra",
+        "district": "Mumbai",
+        "category": "Apparel"
+    },
+    {
+        "id": 25,
+        "name": "The Auto Shop",
+        "logo": "https://ui-avatars.com/api/?name=AS&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United States",
+        "state": "California",
+        "district": "San Francisco",
+        "category": "Auto"
+    },
+    {
+        "id": 26,
+        "name": "Vegan Eats",
+        "logo": "https://ui-avatars.com/api/?name=VE&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United States",
+        "state": "California",
+        "district": "Los Angeles",
+        "category": "Restaurant"
+    },
+    {
+        "id": 27,
+        "name": "Delhi Sweets",
+        "logo": "https://ui-avatars.com/api/?name=DS&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "India",
+        "state": "Delhi",
+        "district": "New Delhi",
+        "category": "Bakery"
+    },
+    {
+        "id": 28,
+        "name": "Empire Pizza",
+        "logo": "https://ui-avatars.com/api/?name=EP&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "United States",
+        "state": "New York",
+        "district": "Manhattan",
+        "category": "Restaurant"
+    },
+    {
+        "id": 29,
+        "name": "Malabar Cafe",
+        "logo": "https://ui-avatars.com/api/?name=MC&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "India",
+        "state": "Kerala",
+        "district": "Kozhikode",
+        "category": "Cafe"
+    },
+    {
+        "id": 30,
+        "name": "Rainbow Cafe",
+        "logo": "https://ui-avatars.com/api/?name=RC&background=171717&color=f97316&size=120&bold=true",
+        "website": "https://example.com",
+        "country": "India",
+        "state": "Kerala",
+        "district": "Thrissur",
+        "category": "Cafe"
+    }
+]

@@ -169,19 +169,64 @@
 
     <nav class="fixed w-full z-50 top-0 px-6 py-4 glass-panel border-b border-obsidian-700/50">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-2">
+            <a href="index.html" class="flex items-center gap-2">
                 <img src="p24_logo.webp" alt="Prize24 Logo" class="h-10 w-auto">
                 <span class="text-2xl font-bold tracking-tighter text-white">Prize<span
                         class="text-blaze-600">24</span></span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center gap-1">
+                <a href="index.html"
+                    class="relative px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-300 rounded-lg hover:bg-white/5">
+                    <i class="fa-solid fa-house mr-2 text-blaze-500"></i>Home
+                    <span
+                        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-0.5 bg-blaze-600 rounded-full"></span>
+                </a>
+                <a href="partners.html"
+                    class="relative px-5 py-2.5 text-sm font-semibold text-gray-400 hover:text-white transition-colors duration-300 rounded-lg hover:bg-white/5">
+                    <i class="fa-solid fa-location-dot mr-2"></i>Find Partners
+                </a>
+                <a href="vendors.html"
+                    class="relative px-5 py-2.5 text-sm font-semibold text-gray-400 hover:text-white transition-colors duration-300 rounded-lg hover:bg-white/5">
+                    <i class="fa-solid fa-store mr-2"></i>For Businesses
+                </a>
             </div>
 
-            <a href="vendors.html"
-                class="group flex items-center gap-3 px-6 py-2.5 bg-white text-obsidian-950 rounded-full font-bold text-sm tracking-wide hover:bg-blaze-500 hover:text-white transition-all duration-300 shadow-lg shadow-white/5 hover:shadow-blaze-600/20">
-                <span>For Businesses</span>
-                <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-            </a>
+            <!-- Mobile Hamburger -->
+            <button id="nav-toggle" class="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-white/5 transition"
+                aria-label="Toggle menu">
+                <span class="block w-6 h-0.5 bg-white rounded-full transition-all duration-300" id="bar1"></span>
+                <span class="block w-6 h-0.5 bg-white rounded-full transition-all duration-300" id="bar2"></span>
+                <span class="block w-4 h-0.5 bg-blaze-500 rounded-full transition-all duration-300" id="bar3"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-obsidian-700/50 pt-4">
+            <div class="flex flex-col gap-2">
+                <a href="index.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl bg-blaze-600/10 text-white font-semibold text-sm border border-blaze-600/20">
+                    <i class="fa-solid fa-house text-blaze-500"></i>Home
+                </a>
+                <a href="partners.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-400 hover:text-white hover:bg-white/5 font-semibold text-sm transition-all duration-200">
+                    <i class="fa-solid fa-location-dot"></i>Find Partners
+                </a>
+                <a href="vendors.html"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-400 hover:text-white hover:bg-white/5 font-semibold text-sm transition-all duration-200">
+                    <i class="fa-solid fa-store"></i>For Businesses
+                </a>
+            </div>
         </div>
     </nav>
+
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
     <section class="pt-32 pb-20 px-6 md:pt-44 md:pb-32 relative overflow-hidden">
         <div class="absolute top-0 right-0 -z-10 opacity-20 blur-[120px] pointer-events-none">
@@ -543,7 +588,7 @@
         </div>
     </footer>
 
-    <!--Start of Tawk.to Script-->
+    <!-- Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
         (function () {
@@ -555,7 +600,7 @@
             s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
-    <!--End of Tawk.to Script-->
+    <!--End of Tawk.to Script -->
 
 </body>
 

@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "name": "Burger Lounge",
+        "logo": "logos/burger_lounge.png",
+        "website": "https://burgerloungeindia.com/",
+        "country": "India",
+        "state": "Kerala",
+        "district": "Thrissur",
+        "category": "Restaurant"
+    }
+]
