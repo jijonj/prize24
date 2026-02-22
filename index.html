@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="public, max-age=0, must-revalidate">
     <title>Prize24 - Rewards that never expire.</title>
 
     <!-- SEO Meta Tags -->
@@ -41,7 +39,11 @@
     <meta name="twitter:description"
         content="The first loyalty app where your progress never expires. Shop local, keep your streak, and win real prizes.">
     <meta name="twitter:image" content="https://prize24.app/p24_logo.webp">
-    <script src="tailwind.js"></script>
+    <!-- Preconnect to external CDNs for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <script src="tailwind.js?v=3.4.16"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -75,7 +77,8 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
 
     <style>
         /* Custom Selection Color */
